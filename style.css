@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #C8BFC8;
+    border: border-box;
+}
+
+body {
+    background-color: rgba(85, 78, 41, 0.873);
+}
+
+/** header **/
+
+header {
+    width: 100%;
+    background-color: #373427;
+}
+.nav-bar {
+    height: 10vh;
+    width: 100%;
+    background-color: #373427;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.initials {
+    height: 9vh;
+    width:100%;
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.checkbox {
+    display: none;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    height: 45px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+ul li {
+    padding: 1rem;
+}
+
+ul a {
+    text-decoration: none;
+}
+
+p:hover {
+    border: 5px ridge #837369;
+}
+
+.border:hover {
+    border: 5px ridge #837369;
+    font-size:large;
+}
+
+a:active { 
+    color: black
+}
+
+input {
+    display: none;
+}
+
+/* a:visited {
+    color: #837369;
+} */
+
+/** body **/
+
+.homepage {
+    height: 730px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.pic {
+    height: 60%;
+    width: 35%;
+    background-image: url("1702545049154.jpg");
+    background-size: cover;
+}
+
+.homepage-info {
+    height : 55%;
+    width : 40%;
+    text-align: right;
+}
+
+.name {
+    height: 180px;
+    font-size: 4.5rem;
+}
+
+.homepage-content {
+    height : 180px;
+    font-size: 1.2rem;
+}
+
+.socialmedia {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fa-brands {
+    margin: 10px;
+    padding: 10px;
+}
+
+.fa-brands:hover {
+    border:2px solid #373427;
+}
+
+/* .imgborder {
+    height: 450px;
+    width: 450px;
+    border: 5px ridge black;
+    position: relative;
+    left: 18px;
+    bottom: 25px;;
+    z-index: -5;
+} */
+
+@media (max-width : 850px) {
+    .checkbox {
+        display: block;
+    }
+    .initials {
+        display: flex;
+        justify-content: space-between;
+    }
+    ul {
+        position: absolute;
+        width: 100%;
+        height: 90vh;
+        left: -100%;
+        top: 10vh;
+        background-color: #C8BFC8;
+        color: #554E29;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+    #check:checked { ul {
+        left: 0;
+    }}
+    ul li a {
+        font-size: 1.25rem;
+    }
+    .name {
+        font-size: 20px;
+        text-align: center;
+        margin: 10px;
+        height:70px;
+    }
+    .homepage-content {
+        height: 300px;
+        text-align: center;
+    }
+    .socialmedia {
+        justify-content: center;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width : 1190px) {
+    .homepage {
+        height: 90vh;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: 5vh;
+    }
+    .name {
+        width: 100%;
+        font-size: 50px;
+        text-align: center;
+        margin: 10px;
+        height:90px;
+    }
+    .homepage-content {
+        height: 200px;
+        text-align: center;
+    }
+    .socialmedia {
+        justify-content: center;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width : 980px) {
+    /* .homepage {
+        height: 90vh;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: 5vh;
+    } */
+    .pic {
+        height: 500px;
+        width: 350px;
+    }
+    .name {
+        width: 100%;
+        font-size: 40px;
+        text-align: center;
+        margin: 10px;
+        height:50px;
+    }
+    
+    .socialmedia {
+        justify-content: center;
+        margin-top: 50px;
+    }
+    /* .homepage-content {
+        height: 200px;
+        text-align: center;
+    } */
+}
+
+@media (max-width : 800px) {
+    .homepage {
+        justify-content: flex-end;
+    }
+    .pic {display : none;}
+    .homepage-content {height: 380px;
+    margin-top:70px;
+text-align: justify;}
+}
+
+@media (max-width : 525px) {
+    .homepage {
+        justify-content: flex-end;
+    }
+    .pic {display : none;}
+    .homepage-content {height: 800px;
+    margin-top:70px;
+text-align: justify;}
+}
